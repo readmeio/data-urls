@@ -119,6 +119,17 @@ describe('parse', function () {
     );
   });
 
+  it('should retain casing of `name` attributes', () => {
+    const parsed = parse('data:text/plain;name=LoREM_IpSuM.txt;base64,TG9yZW0gaXBzdW0gZG9sb3Igc2l0IG1ldA==') as DataURL;
+
+    expect(parsed).to.be.an('object');
+    expect(parsed.mediaType).to.equal('text/plain;name=lorem_ipsum.txt');
+    expect(parsed.contentType).to.equal('text/plain');
+    expect(parsed.name).to.equal('LoREM_IpSuM.txt');
+    expect(parsed.base64).equal(true);
+    expect(parsed.data).to.equal('TG9yZW0gaXBzdW0gZG9sb3Igc2l0IG1ldA==');
+  });
+
   it('export buffer from parsed data with base64', () => {
     const parsed = parse('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D') as DataURL;
     const buffer = Buffer.from(parsed.data, 'base64');

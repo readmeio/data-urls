@@ -16,6 +16,7 @@ function validate(str: string) {
 export type DataURL = {
   mediaType?: string;
   contentType?: string;
+  name?: string;
   base64: boolean;
   data: string;
   toBuffer: () => Buffer;
@@ -37,7 +38,15 @@ function parse(str: string) {
   if (parts[1]) {
     parsed.mediaType = parts[1].toLowerCase();
 
-    const mediaTypeParts = parts[1].split(';').map(x => x.toLowerCase());
+    const mediaTypeParts = parts[1].split(';').map(x => {
+      // `name` attributes are for filenames so we shouldn't lowercase them as some filesystems are
+      // case-sensitive.
+      if (x.startsWith('name=')) {
+        return x;
+      }
+
+      return x.toLowerCase();
+    });
 
     parsed.contentType = mediaTypeParts[0];
 
