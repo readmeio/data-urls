@@ -1,6 +1,6 @@
 {
   "name": "@readme/data-urls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility for parsing and validating data URLs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
