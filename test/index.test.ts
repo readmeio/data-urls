@@ -1,5 +1,7 @@
 import type { DataURL } from '../src';
+
 import { expect } from 'chai';
+
 import { parse, validate } from '../src';
 
 describe('parse', function () {
