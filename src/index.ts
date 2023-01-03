@@ -13,7 +13,7 @@ function validate(str: string) {
   return DATA_URL_REGEX.test((str || '').trim());
 }
 
-export type DataURL = {
+export interface DataURL {
   mediaType?: string;
   contentType?: string;
   name?: string;
@@ -21,7 +21,7 @@ export type DataURL = {
   data: string;
   toBuffer: () => Buffer;
   [k: string]: any;
-};
+}
 
 /**
  * Parse a given data URL into its individual parts.
