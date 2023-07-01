@@ -14,13 +14,13 @@ function validate(str: string) {
 }
 
 export interface DataURL {
-  mediaType?: string;
-  contentType?: string;
-  name?: string;
-  base64: boolean;
-  data: string;
-  toBuffer: () => Buffer;
   [k: string]: any;
+  base64: boolean;
+  contentType?: string;
+  data: string;
+  mediaType?: string;
+  name?: string;
+  toBuffer: () => Buffer;
 }
 
 /**
