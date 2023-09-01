@@ -3,13 +3,5 @@
     "@readme/eslint-config",
     "@readme/eslint-config/typescript"
   ],
-  "root": true,
-  "overrides": [
-    {
-      "files": ["test/**"],
-      "rules": {
-        "func-names": "off"
-      }
-    }
-  ]
+  "root": true
 }

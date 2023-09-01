@@ -15,10 +15,8 @@
     "pretest": "npm run lint",
     "prettier": "prettier --list-different --write \"./**/**.{js,ts}\"",
     "release": "npx conventional-changelog-cli -i CHANGELOG.md -s",
-    "test:browser": "karma start --single-run",
-    "test:browser:chrome": "karma start --browsers=Chrome --single-run=false",
-    "test:browser:debug": "karma start --single-run=false",
-    "test": "nyc mocha \"test/**/*.test.ts\""
+    "test": "vitest --coverage",
+    "test:browser": "vitest --browser.name=chrome --browser.headless"
   },
   "repository": {
     "type": "git",
@@ -30,21 +28,13 @@
   },
   "homepage": "https://github.com/readmeio/data-urls#readme",
   "devDependencies": {
-    "@jsdevtools/host-environment": "^2.1.2",
-    "@jsdevtools/karma-config": "^3.1.7",
-    "@readme/eslint-config": "^10.6.1",
-    "@types/chai": "^4.3.1",
-    "@types/mocha": "^10.0.0",
+    "@readme/eslint-config": "^12.2.0",
     "@types/node": "^20.3.3",
-    "chai": "^4.3.4",
+    "@vitest/browser": "^0.34.3",
+    "@vitest/coverage-v8": "^0.34.3",
     "eslint": "^8.44.0",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
-    "prettier": "^2.8.7",
-    "ts-loader": "^8.4.0",
-    "ts-node": "^10.7.0",
-    "typescript": "^5.1.6",
-    "webpack": "^4.46.0"
+    "prettier": "^3.0.3",
+    "typescript": "^5.1.6"
   },
   "browserslist": [
     "last 2 versions"

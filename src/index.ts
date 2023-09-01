@@ -1,5 +1,4 @@
 const DATA_URL_REGEX =
-  // eslint-disable-next-line unicorn/no-unsafe-regex
   /^data:([a-z]+\/[a-z0-9-+.]+(;[a-z0-9-.!#$%*+.{}|~`]+=[a-z0-9-.!#$%*+.{}()_|~`]+)*)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s<>]*?)$/i;
 
 /**
@@ -14,6 +13,7 @@ function validate(str: string) {
 }
 
 export interface DataURL {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [k: string]: any;
   base64: boolean;
   contentType?: string;
