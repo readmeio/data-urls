@@ -3,6 +3,24 @@
   "version": "2.0.0",
   "description": "A utility for parsing and validating data URLs.",
   "license": "ISC",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.cts",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:readmeio/data-urls.git"
@@ -11,21 +29,6 @@
     "url": "https://github.com/readmeio/data-urls/issues"
   },
   "homepage": "https://github.com/readmeio/data-urls#readme",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    },
-    "./package.json": "./package.json"
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "sideEffects": false,
-  "engines": {
-    "node": ">=14"
-  },
   "scripts": {
     "build": "tsup",
     "lint": "eslint . --ext .js,.ts",
