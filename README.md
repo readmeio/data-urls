@@ -5,7 +5,7 @@ A utility for parsing and validating [data URLs](https://developer.mozilla.org/e
 [![](https://img.shields.io/npm/v/@readme/data-urls)](https://npm.im/@readme/data-urls)
 [![License](https://img.shields.io/npm/l/@readme/data-urls.svg)](LICENSE)
 
-[![](https://d3vv6lp55qjaqc.cloudfront.net/items/1M3C3j0I0s0j3T362344/Untitled-2.png)](https://readme.io)
+[![](https://raw.githubusercontent.com/readmeio/.github/main/oss-header.png)](https://readme.io)
 
 This library is a loose fork of [parse-data-url](https://npm.im/parse-data-url) and [valid-data-url](https://npm.im/valid-data-url).
 
