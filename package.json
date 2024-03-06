@@ -40,11 +40,11 @@
     "test:browser": "vitest --browser.name=chrome --browser.headless"
   },
   "devDependencies": {
-    "@readme/eslint-config": "^13.4.1",
+    "@readme/eslint-config": "^13.5.0",
     "@types/node": "^20.3.3",
     "@vitest/browser": "^1.1.1",
     "@vitest/coverage-v8": "^1.1.1",
-    "eslint": "^8.44.0",
+    "eslint": "^8.57.0",
     "prettier": "^3.0.3",
     "tsup": "^8.0.1",
     "typescript": "^5.1.6",
