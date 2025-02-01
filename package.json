@@ -44,7 +44,7 @@
     "@types/node": "^22.0.2",
     "@vitest/browser": "^2.0.5",
     "@vitest/coverage-v8": "^2.0.5",
-    "eslint": "^8.57.0",
+    "eslint": "^9.19.0",
     "prettier": "^3.0.3",
     "tsup": "^8.0.1",
     "typescript": "^5.1.6",
