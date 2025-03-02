@@ -41,7 +41,7 @@ describe('parse', () => {
     });
   });
 
-  it('parse with empty data ', () => {
+  it('parse with empty data', () => {
     const parsed = parse('data:,') as DataURL;
 
     expect(parsed).toStrictEqual({
@@ -178,7 +178,7 @@ describe('validate', () => {
       'data:image/svg+xml;name=lorem_ipsum.txt;charset=UTF-8,some-data',
       "data:text/html,<script>alert('hi');</script>",
     ])('%s', value => {
-      expect(validate(value), value).toBe(true);
+      expect(validate(value)).toBe(true);
     });
   });
 
@@ -194,6 +194,6 @@ describe('validate', () => {
     'base64',
     'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAAD///+l2Z/dAAAAM0lEQVR4nGP4/5/h/1+G/58ZDrAz3D/McH8yw83NDDeNGe4Ug9C9zwz3gVLMDA/A6P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC',
   ])('%s', value => {
-    expect(validate(value), value).toBe(false);
+    expect(validate(value)).toBe(false);
   });
 });
