@@ -1,8 +1,8 @@
-import type { DataURL } from '../src';
+import type { DataURL } from '../src/index.ts';
 
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
-import { parse, validate } from '../src';
+import { parse, validate } from '../src/index.ts';
 
 describe('parse', () => {
   it('return false when invalid data url', () => {

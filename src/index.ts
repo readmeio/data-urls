@@ -13,7 +13,7 @@ function validate(str: string) {
 }
 
 export interface DataURL {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // biome-ignore lint/suspicious/noExplicitAny: `additionalProperties: true`
   [k: string]: any;
   base64: boolean;
   contentType?: string;
