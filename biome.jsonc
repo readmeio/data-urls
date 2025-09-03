@@ -3,7 +3,7 @@
   "extends": ["@readme/standards/biome"],
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**/*.{cjs,mjs,js,mts,ts}", "!coverage/**", "!dist/**"],
+    "includes": ["**/*.{cjs,mjs,js,mts,ts}", "!coverage", "!dist"],
   },
   "linter": {
     "enabled": true,
