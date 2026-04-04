@@ -3,6 +3,11 @@ import { defineConfig } from 'tsdown';
 export default defineConfig(options => ({
   ...options,
 
+  attw: {
+    pack: true,
+    format: 'ascii',
+    profile: 'node16',
+  },
   cjsDefault: true,
   clean: true,
   dts: true,
