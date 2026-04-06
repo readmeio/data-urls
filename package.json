@@ -1,6 +1,6 @@
 {
   "name": "@readme/data-urls",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "A utility for parsing and validating data URLs.",
   "license": "ISC",
   "sideEffects": false,
