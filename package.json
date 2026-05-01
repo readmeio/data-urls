@@ -55,7 +55,6 @@
   "browserslist": [
     "last 2 versions"
   ],
-  "prettier": "@readme/standards/prettier",
   "engines": {
     "node": ">=22"
   }
