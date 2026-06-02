@@ -1,6 +1,6 @@
 {
   "name": "@readme/data-urls",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "A utility for parsing and validating data URLs.",
   "homepage": "https://github.com/readmeio/data-urls#readme",
   "bugs": {
